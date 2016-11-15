@@ -14,6 +14,12 @@ dateLeft:{
     default:null
 },
 phoneNumber:String,
+
+department:{
+    type:mongoose.Schema.Types.ObjectId,
+    ref:'Department'
+},
+
 email:String
 
 });
