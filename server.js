@@ -3,7 +3,7 @@
 var express         = require('express'),
     app             = express(),
     mongoose        = require('mongoose'),
-    seedDB          = require('./controllers/seedDB');
+    seedDB          = require('./controllers/seedDB'),
     bodyParser      = require('body-parser');
 
 
@@ -27,6 +27,7 @@ app.get('/', (req,res) =>{
 });
 
 //seedDB();
+//seedDB.AddWorkers();
 
 app.listen(PORT, () =>{
     console.log(`Server is running on Port ${PORT}`);

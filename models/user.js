@@ -1,9 +1,9 @@
 var mongoose = require('mongoose');
 
 var WorkerSchema = new mongoose.Schema({
-firtsName:String,
+firstName:String,
 lastName:String,
-Birthdaye:Date,
+birthday:Date,
 isActive:Boolean,
 dateJoined:{
     type:Date,
@@ -26,4 +26,4 @@ email:String
 
 var Workers = mongoose.model('Worker', WorkerSchema);
 
-module.export =  Workers;
+module.exports =  Workers;
