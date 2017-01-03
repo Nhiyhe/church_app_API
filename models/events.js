@@ -20,6 +20,8 @@ var EventsSchema = new mongoose.Schema({
         default:null
     },
 
+    additionalInfo:String
+
 });
 
 var Events = mongoose.model('Event', EventsSchema);
