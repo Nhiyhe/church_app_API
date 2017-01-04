@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const Workers = require('../models/user');
 
 mongoose.Promise = global.Promise;
 
@@ -13,8 +14,11 @@ db.on('error', (error) => console.log('Oppss something went wrong ' + error));*/
 
 beforeEach((done) => {
 
-    mongoose.connection.collections.workers.drop(() => {
+//Workers.remove({}).then( ( ) => done());
+
+
+  /*  mongoose.connection.collections.workers.drop(() => {
         done();        
-    });
+    });*/
 
 });

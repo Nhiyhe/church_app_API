@@ -6,6 +6,8 @@ const bodyParser = require('body-parser');
 
 var env = process.env.NODE_ENV || 'development';
 
+mongoose.Promise = global.Promise;
+
 if (env === 'development') {
     mongoose.connect("mongodb://localhost/church_app_db");
 } else if (env === 'test') {
@@ -21,7 +23,7 @@ db.on('error', () => {
     console.error("Database Not Connected..");
 });
 
-db.once('connect', () =>{
+db.once('open', () =>{
     console.log("Database is Online..");
 });
 
