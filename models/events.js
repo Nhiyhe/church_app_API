@@ -1,7 +1,10 @@
 var mongoose = require('mongoose');
 
 var EventsSchema = new mongoose.Schema({
-    title:String,
+    title: {
+        type: Strig,
+        trim:true
+    },
     eventCreated:{
         type:Date,
         default:Date.now

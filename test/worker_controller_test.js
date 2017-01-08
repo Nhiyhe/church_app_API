@@ -53,6 +53,19 @@ describe("WORKER CONTROLLER TEST", () => {
 
     });
 
+    it("GET SINGLE WORKER /api/worker/2 that return 404", (done) => {
+        
+        request(app)
+            .get('/api/workers/' + 28383)
+            .end((err, response) => {
+                expect(response.status).toBe(404);
+                expect(response.text).toBe('Not a valid ID')
+                console.log(response);
+                done()
+            });
+
+    });
+
 
     it("CREATE NEW WORKER  POST => /api/workers", (done) => { 
         Worker.count()       

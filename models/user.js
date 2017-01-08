@@ -4,11 +4,13 @@ var Schema = mongoose.Schema;
 var WorkerSchema = new Schema({
     firstName: {
         type: String,
-        required:[true, "firstName is required"]
+        required: [true, "firstName is required"],
+        trim:true
     },
     lastName: {
         type: String,
-        required: [true, "lastName is required"]
+        required: [true, "lastName is required"],
+        trim:true
     },
     birthday: Date,
     isActive: Boolean,
@@ -27,7 +29,10 @@ var WorkerSchema = new Schema({
         ref: 'Department'
     },
 
-    email: String,
+    email: {
+        type: String,
+        trim:true
+    },
     address: {
         type: mongoose.Schema.Types.ObjectId,
         ref:'Address'

@@ -5,7 +5,9 @@
   "main": "server.js",
   "scripts": {
     "start": "nodemon server",
-    "test": " SET \"NODE_ENV=test\" && nodemon --exec \"mocha --recursive -R min\""
+    "test": " SET \"NODE_ENV=test\" && nodemon --exec \"mocha --recursive  \"",
+    "test2": " SET \"NODE_ENV=test\" && nodemon --exec \"mocha --recursive -R min \""
+    
   },
   "author": "Funminiyi Adekunle",
   "license": "ISC",
